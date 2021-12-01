@@ -1,0 +1,32 @@
+
+<mat-toolbar
+  class="flex bg-gradient-to-r from-blue-500 via-purple-900 to-gray-900"
+>
+  <a mat-list-item routerLink="/chat" *ngIf="isLoggedIn$ | async">
+    <mat-icon>chat</mat-icon>
+    <span>Rooms</span>
+  </a>
+  <a mat-list-item routerLink="/" *ngIf="isLoggedOut$ | async">
+    <mat-icon>account_circle</mat-icon>
+    <span>Login</span>
+  </a>
+
+  <a mat-list-item routerLink="/signup" *ngIf="isLoggedOut$ | async">
+    <mat-icon class="flex ml-10">group_add</mat-icon>
+    <span>Sign Up</span>
+  </a>
+
+  <a
+    mat-list-item
+    routerLink="/"
+    (click)="logout()"
+    *ngIf="isLoggedIn$ | async"
+  >
+    <mat-icon class="ml-8">exit_to_app</mat-icon>
+    <span>Logout</span>
+  </a>
+</mat-toolbar>
+
+<div class="w-full mt-28" *ngIf="loading">
+  <mat-spinner class="flex ml-96"></mat-spinner>
+</div>

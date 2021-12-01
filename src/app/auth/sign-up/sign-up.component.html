@@ -1,0 +1,52 @@
+<mat-card class="max-w-md m-12 m-auto m-auto mt-80">
+  <mat-card-title
+    class="
+      text-center
+      font-bold
+      text-xl text-transparent
+      bg-clip-text bg-gradient-to-br
+      from-indigo-900
+      to-purple-900
+    "
+    >Sign Up</mat-card-title
+  >
+  <mat-card-content>
+    <form [formGroup]="form" class="flex flex-col">
+      <mat-form-field>
+        <input
+          matInput
+          type="email"
+          placeholder="Email"
+          formControlName="email"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          matInput
+          type="name"
+          placeholder="Name"
+          formControlName="displayName"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          matInput
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+        />
+      </mat-form-field>
+
+      <button
+        mat-raised-button
+        class="h-11 font-bold text-white bg-purple-800 from focus:bg-blue-900"
+        (click)="singUp()"
+        [disabled]="!form.valid"
+      >
+        Sign Up
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>

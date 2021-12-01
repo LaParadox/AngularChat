@@ -1,0 +1,56 @@
+.cont {
+  border: 25px solid #000;
+  border-radius: 30px !important;
+  border: #000 !important;
+  height: 44rem;
+  flex: 1 1 auto;
+  margin: 3rem;
+  margin: auto;
+  margin-top: 7rem;
+  max-width: 640px;
+  --tw-gradient-from: #34d399;
+  --tw-gradient-stops: var(--tw-gradient-from),
+    var(--tw-gradient-to, rgba(52, 211, 153, 0));
+  --tw-gradient-to: #3b82f6;
+}
+
+.viewport {
+  height: 32rem;
+  width: 100%;
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+            box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(41, 86, 212);
+    border-radius: 10px;
+  }
+}
+
+.blue {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1sk2dVlnhD0kjY5tykiutt_5eIgW15OWx_2IdGk2DsQ0w62WFjfo_Q0Ij-THSR9yDSTM&usqp=CAU");
+}
+
+.yellow {
+  background-image: linear-gradient(to left,#fbd72b, #ee8945);
+}
+
+.pink {
+  background-image: linear-gradient(to left,
+  #ee9ca7,
+  #ffdde1);
+}
+
+.timber {
+  background-image: linear-gradient(to left,
+  #6441a5,
+  #2a0845);
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}

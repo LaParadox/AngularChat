@@ -1,0 +1,24 @@
+@use '~@angular/material' as mat;
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "../node_modules/@angular/material/theming";
+
+@include mat.core();
+
+.spinner-container {
+  position: fixed;
+  height: 300px;
+  width: 345px;
+  display: flex;
+  background: white;
+  margin-top: 70px;
+  z-index: 1;
+  opacity: 0.5;
+  justify-content: center;
+}
+
+html, body { height: 100%; }
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
